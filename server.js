@@ -26,7 +26,7 @@ app.use(middleware.logger);
 
 app.get('/about',middleware.requireAuthentication, function(req,res)
 {
-	res.send('this is about express server');
+	res.send('this is about express server, now changing track with GIT system');
 });
 //console.log('my folder ' + __dirname);
 app.use(express.static(__dirname + '/public'));
