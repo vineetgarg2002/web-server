@@ -3,21 +3,6 @@ var middleware = require('./middleware.js');
 var app = express();
 var PORT = 3000;
 
-// var middleware = {
-// 	requireAuthentication : function(req,res,next)
-// 	{
-// 		console.log('private route hit');
-// 		next();
-// 	},
-// 	logger: function(req,res,next)
-// 	{
-// 		var date = new Date();
-// 		console.log('request:' + req.method + ' ' + req.originalUrl + ' @' + date.toString());
-// 		next();
-// 	} 
-// }
-// press ctrl-shift-r for hard reload
-
 app.use(middleware.logger);
 
 // app.get('/',function(req,res)
@@ -27,7 +12,7 @@ app.use(middleware.logger);
 
 app.get('/about',middleware.requireAuthentication, function(req,res)
 {
-	res.send('this is about express server, now changing track with GIT system');
+	res.send('this is about express server, now changing track with GIT system once again');
 });
 //console.log('my folder ' + __dirname);
 app.use(express.static(__dirname + '/public'));
