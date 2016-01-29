@@ -2,7 +2,7 @@ module.exports =
 {
 	requireAuthentication: function(req,res,next)
 							{
-								console.log("middle ware auth hit");
+								console.log("middleware authentication hit");
 								next();
 							},
 	logger    			 : function(req,res,next)
