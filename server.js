@@ -19,5 +19,5 @@ app.use(express.static(__dirname + '/public'));
 
 app.listen(PORT,function()
 {
-	console.log('server started .....' + PORT);
+	console.log('server started ......' + PORT);
 });
